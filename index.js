@@ -1,4 +1,4 @@
-const taskArray = [];
+const tasks = [];
 
 const separation = ' ： ';
 
@@ -15,21 +15,21 @@ const header = {
 // タスクの表示処理
 const dispTask = () => {
   console.log(header.frame + header.text + header.frame);
-  taskArray.forEach((value, index) => console.log(index + separation + value));
+  tasks.forEach((value, index) => console.log(index + separation + value));
 };
 
 // タスクの追加処理
 const addTask = () => {
   const inputTask = window.prompt(message.input);
-  taskArray.push(inputTask);
+  tasks.push(inputTask);
   dispTask();
   alert(message.success); 
 };
 
 // 初期表示
-taskArray.push('掃除');
-taskArray.push('買い物');
-taskArray.push('散歩');
+tasks.push('掃除');
+tasks.push('買い物');
+tasks.push('散歩');
 dispTask();
 
 // 追加表示
